@@ -1,0 +1,29 @@
+# version: '3'
+# services:
+#   backend:
+#     networks: [wallet-network]
+#     build: .
+#     ports:
+#      - 3000:3000
+#     volumes:
+#      - .:/usr/src/app
+#      - /usr/src/app/node_modules
+
+#   wallet-pgadmin:
+#     networks: [wallet-network]
+#     container_name: wallet-app-db-pgadmin
+#     image: dpage/pgadmin4:4.21
+#     environment:
+#       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+#       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+#     volumes:
+#       - wallet-app-pgadmin:/var/lib/pgadmin
+#     ports:
+#       - '${PGADMIN_PORT:-9693}:80'
+#     restart: unless-stopped
+
+# volumes:
+#   wallet-app-pgadmin:
+
+# networks:
+#   wallet-network:
